@@ -1,11 +1,17 @@
-#!/usr/bin/python
+# Python use thread have two ways: function or class new thread object
+
+# 1. function way : use thread module start_new_thread() create new thread. eg:
+# thread.start_new_thread ( function, args[, kwargs] )
+
+
+# !/usr/bin/python
 # -*- coding: UTF-8 -*-
 
 import thread
 import time
 
 
-# 为线程定义一个函数
+# define a thread function
 def print_time(threadName, delay):
     count = 0
     while count < 5:
@@ -14,7 +20,7 @@ def print_time(threadName, delay):
         print "%s: %s" % (threadName, time.ctime(time.time()))
 
 
-# 创建两个线程
+# create two thread
 try:
     thread.start_new_thread(print_time, ("Thread-1", 2,))
     thread.start_new_thread(print_time, ("Thread-2", 4,))
