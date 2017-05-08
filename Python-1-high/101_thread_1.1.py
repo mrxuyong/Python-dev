@@ -1,6 +1,6 @@
 # Python use thread have two ways: function or in class new thread object
 
-# 1. function way : use thread module start_new_thread() create new thread. eg:
+# 1.1. function way : use thread module start_new_thread() create new thread. eg:
 # thread.start_new_thread ( function, args[, kwargs] )
 
 
