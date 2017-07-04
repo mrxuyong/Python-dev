@@ -1,5 +1,6 @@
-# !/usr/bin/python
 # -*- coding: UTF-8 -*-
+
+# !/usr/bin/python
 
 # 2.2 线程优先级队列（ Queue） #
 

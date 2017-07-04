@@ -1,9 +1,10 @@
+# -*- coding: UTF-8 -*-
+
 # 1.2. use Threading module create thread
 # use Threading module create thread, from threading.Thread extend, then overwrite __init__ Method and run Method:
 
 
 # !/usr/bin/python
-# -*- coding: UTF-8 -*-
 
 import threading
 import time

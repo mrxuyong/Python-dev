@@ -1,5 +1,6 @@
-# !/usr/bin/python
 # -*- coding: UTF-8 -*-
+
+# !/usr/bin/python
 
 # 2.1 线程同步 #
 
