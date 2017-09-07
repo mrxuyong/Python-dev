@@ -1,5 +1,13 @@
 # -*- coding: UTF-8 -*-
 
+# @author: xuyong
+
+# @file: 102_JSON_1.1.py
+
+# @time: 2017/7/8 下午5:12
+
+# @desc: Python JSON
+
 # 使用 Python 语言来编码和解码 JSON 对象
 # 使用 JSON 函数需要导入 json 库：import json
 
