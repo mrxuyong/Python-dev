@@ -56,7 +56,7 @@ print 1 // 2
 在2.x时代，异常在代码中除了表示程序错误，还经常做一些普通控制结构应该做的事情，在3.x中可以看出，设计者让异常变的更加专一，只有在错误发生的情况才能去用异常捕获语句来处理。
 '''
 
-# 5. xrange
+# 5. xrange  ？？？ todo 运行失败
 '''
 在 Python 2 中 xrange() 创建迭代对象的用法是非常流行的。比如： for 循环或者是列表/集合/字典推导式。
 这个表现十分像生成器（比如。"惰性求值"）。但是这个 xrange-iterable 是无穷的，意味着你可以无限遍历。
@@ -79,4 +79,63 @@ def test_xrange(n):
     for i in xrange(n):
         pass
 
+
 # Python2.x
+# print 'Python', python_version()
+print '\ntiming range()'
+# %timeit test_range(n)
+
+print '\ntiming xrange()'
+# %timeit test_xrange(n)
+
+# Python3.x
+# print('Python', python_version())
+
+print('\ntiming range()')
+# %timeit test_range(n)
+
+# 6、 八进制字面量表示
+'''
+八进制数必须写成0o777，原来的形式0777不能用了；二进制必须写成0b111。
+新增了一个bin()函数用于将一个整数转换成二进制字串。 Python 2.6已经支持这两种语法。
+在Python 3.x中，表示八进制字面量的方式只有一种，就是0o1000。
+'''
+print 0o1
+print 0o777
+print '2的二进制:', bin(2)
+
+# 7、 不等运算符
+'''
+Python 2.x中不等于有两种写法 != 和 <>
+Python 3.x中去掉了<>, 只有!=一种写法，还好，我从来没有使用<>的习惯
+'''
+
+# 8、 去掉了repr表达式``
+'''
+Python 2.x 中反引号``相当于repr函数的作用
+Python 3.x 中去掉了``这种写法，只允许使用repr函数，这样做的目的是为了使代码看上去更清晰么？不过我感觉用repr的机会很少，一般只在debug的时候才用，多数时候还是用str函数来用字符串描述对象。
+'''
+
+# def sendMail(from_: str, to: str, title: str, body: str) -> bool:
+#     pass
+
+# 9、 数据类型
+'''
+1）Py3.X去除了long类型，现在只有一种整型——int，但它的行为就像2.X版本的long
+2）新增了bytes类型，对应于2.X版本的八位串，定义一个bytes字面量的方法如下：
+'''
+b = b'china'
+type(b)
+# print 'type(b):', type(b)
+
+# str对象和bytes对象可以使用.encode() (str -> bytes) or .decode() (bytes -> str)方法相互转化。
+s = b.decode()
+s
+
+b1 = s.encode()
+b1
+
+'''
+3）dict的.keys()、.items 和.values()方法返回迭代器，而之前的iterkeys()等函数都被废弃。同时去掉的还有 dict.has_key()，用 in替代它吧 。
+'''
+
