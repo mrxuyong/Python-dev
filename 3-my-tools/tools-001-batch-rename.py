@@ -6,7 +6,7 @@
 
 # @time: 2023/7/8 15:52
 
-# @desc:文件批量 重命名
+# @desc: batch-rename 文件批量 重命名
 
 import os
 
